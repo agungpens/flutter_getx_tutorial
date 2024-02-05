@@ -21,10 +21,23 @@ class HomePages extends StatelessWidget {
                       Get.snackbar('ini Judul', 'ini Pesan nya',
                           icon: Icon(Icons.check_circle_outline),
                           animationDuration: Duration(milliseconds: 200),
-                          duration: Duration(seconds: 2),
+                          duration: Duration(seconds: 200),
                           backgroundColor: Colors.lightGreen),
                     },
                 child: Text('Show Snack Bar')),
+            ElevatedButton(
+                onPressed: () => {
+                      Get.defaultDialog(
+                          title: "Confirmation",
+                          middleText: "apakah ini pesan ?",
+                          textCancel: "Bukan",
+                          textConfirm: "Benar",
+                          onConfirm: () {
+                            Get.back();
+                            Get.snackbar('New Message', 'OK');
+                          }),
+                    },
+                child: Text('Show dialog')),
           ],
         ),
       ),
