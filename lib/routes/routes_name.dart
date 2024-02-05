@@ -3,4 +3,7 @@ abstract class RouteName {
   static const page_2 = '/page-2';
   static const page_3 = '/page-3';
   static const page_4 = '/page-4';
+
+  static const home = '/';
+  static const product = '/product';
 }

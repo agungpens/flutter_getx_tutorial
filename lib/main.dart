@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_tutorial/pages/page_1.dart';
+import 'package:getx_tutorial/pages/homepage.dart';
 import 'package:get/get.dart';
 import 'package:getx_tutorial/routes/route.dart';
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: PageSatu(),
+      home: HomePages(),
       getPages: AppRoutePage.pages,
     );
   }
