@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_tutorial/routes/routes_name.dart';
@@ -38,6 +40,57 @@ class HomePages extends StatelessWidget {
                           }),
                     },
                 child: Text('Show dialog')),
+            ElevatedButton(
+                onPressed: () => {
+                      Get.bottomSheet(Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).viewInsets.bottom),
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 30, vertical: 30),
+                          color: Colors.grey,
+                          child: Center(
+                            child: ListView(
+                              children: [
+                                TextField(
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      label: Text("Tambahkan")),
+                                ),
+                                SizedBox(height: 20),
+                                TextField(
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      label: Text("Tambahkan")),
+                                ),
+                                SizedBox(height: 20),
+                                TextField(
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      label: Text("Tambahkan")),
+                                ),
+                                SizedBox(height: 20),
+                                TextField(
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      label: Text("Tambahkan")),
+                                ),
+                                SizedBox(height: 20),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    primary: Colors.blue, // background
+                                    onPrimary: Colors.white, // foreground
+                                  ),
+                                  onPressed: () {},
+                                  child: Text('Simpan Data'),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ))
+                    },
+                child: Text('Bottom Sheet')),
           ],
         ),
       ),
