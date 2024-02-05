@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tutorial/pages/page_2.dart';
+import 'package:getx_tutorial/routes/routes_name.dart';
 
 class PageSatu extends StatelessWidget {
   @override
@@ -17,7 +17,7 @@ class PageSatu extends StatelessWidget {
                       //   MaterialPageRoute(builder: (_) => PageDua()),
                       // )
 
-                      Get.off(PageDua()) // push replacement
+                      Get.offNamed(RouteName.page_2) // push replacement
                     },
                 child: Text('Next Page')),
           ],

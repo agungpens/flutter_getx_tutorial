@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tutorial/pages/page_4.dart';
+import 'package:getx_tutorial/routes/routes_name.dart';
 
 class PageTiga extends StatelessWidget {
   @override
@@ -16,7 +16,8 @@ class PageTiga extends StatelessWidget {
                       // navigator!.push(
                       //   MaterialPageRoute(builder: (_) => PageEmpat()),
                       // )
-                      Get.offAll(PageEmpat()) // push replacement Until
+                      Get.offAllNamed(
+                          RouteName.page_4) // push replacement Until
                     },
                 child: Text('Next Page')),
             ElevatedButton(

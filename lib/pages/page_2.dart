@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tutorial/pages/page_3.dart';
+import 'package:getx_tutorial/routes/routes_name.dart';
 
 class PageDua extends StatelessWidget {
   @override
@@ -13,13 +13,8 @@ class PageDua extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: () async {
-                  // navigator!.push(
-                  //   MaterialPageRoute(builder: (_) => PageTiga()),
-                  // )
-
-                  // Get.to(PageTiga(), arguments: 'Ini data dari page 2')
-                  var data = await Get.to(PageTiga());
-                  print('Hasil $data');
+                  Get.toNamed(RouteName.page_3,
+                      arguments: 'Ini data dari page 2');
                 },
                 child: Text('Next Page')),
             ElevatedButton(
